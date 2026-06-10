@@ -26,7 +26,7 @@ For update checks that only inspect remote pages and local metadata, directory c
 Use the bundled script:
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py <command>
+python <skill-root>\scripts\behance_grab.py <command>
 ```
 
 The script uses `curl.exe`; request network approval when needed.
@@ -34,7 +34,7 @@ The script uses `curl.exe`; request network approval when needed.
 If the user reports network issues or the page is slow, run a quick connectivity test first:
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py probe
+python <skill-root>\scripts\behance_grab.py probe
 ```
 
 Use `probe --remind` when you want the script to print a short network reminder after a successful check.
@@ -44,32 +44,32 @@ Use `probe --remind` when you want the script to print a short network reminder 
 Download a single public Behance project into the confirmed folder:
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py project "<project-url>" --output "<project-folder>"
+python <skill-root>\scripts\behance_grab.py project "<project-url>" --output "<project-folder>"
 ```
 
 Download or incrementally update a public Behance moodboard:
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py moodboard "<moodboard-url>" --output "<moodboard-folder>"
+python <skill-root>\scripts\behance_grab.py moodboard "<moodboard-url>" --output "<moodboard-folder>"
 ```
 
 Check whether a project or moodboard has updates:
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py check "<project-or-moodboard-url>" --output "<existing-folder>"
+python <skill-root>\scripts\behance_grab.py check "<project-or-moodboard-url>" --output "<existing-folder>"
 ```
 
 Download and create a ZIP package in one run:
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py project "<project-url>" --output "<project-folder>" --zip
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py moodboard "<moodboard-url>" --output "<moodboard-folder>" --zip
+python <skill-root>\scripts\behance_grab.py project "<project-url>" --output "<project-folder>" --zip
+python <skill-root>\scripts\behance_grab.py moodboard "<moodboard-url>" --output "<moodboard-folder>" --zip
 ```
 
 Zip an existing downloaded project or moodboard folder:
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py zip "<folder>"
+python <skill-root>\scripts\behance_grab.py zip "<folder>"
 ```
 
 Use `--zip-path "<zip-file>"` when the user wants a specific ZIP location.

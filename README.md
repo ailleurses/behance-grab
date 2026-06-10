@@ -16,20 +16,20 @@
 
 ## 用法
 
-直接使用 skill 目录里的脚本：
+使用 skill 目录里的脚本：
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py <command>
+python <skill-root>\scripts\behance_grab.py <command>
 ```
 
 ### 常用命令
 
 ```powershell
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py project "<project-url>" --output "<folder>" --zip
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py moodboard "<moodboard-url>" --output "<folder>" --zip
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py check "<url>" --output "<existing-folder>"
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py probe --remind
-python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py zip "<folder>"
+python <skill-root>\scripts\behance_grab.py project "<project-url>" --output "<folder>" --zip
+python <skill-root>\scripts\behance_grab.py moodboard "<moodboard-url>" --output "<folder>" --zip
+python <skill-root>\scripts\behance_grab.py check "<url>" --output "<existing-folder>"
+python <skill-root>\scripts\behance_grab.py probe --remind
+python <skill-root>\scripts\behance_grab.py zip "<folder>"
 ```
 
 ### 命令说明
@@ -49,7 +49,7 @@ python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py zip "<
 把整个目录复制到：
 
 ```text
-C:\Users\lenovo\.codex\skills\behance-grab
+<CODEX_HOME>/skills/behance-grab
 ```
 
 然后重新启动或刷新 Codex，让它加载新的 skill 文件。
