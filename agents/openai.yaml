@@ -1,0 +1,4 @@
+interface:
+  display_name: "Behance Grab"
+  short_description: "Download, sync, check, and zip Behance projects or moodboards."
+  default_prompt: "Use $behance-grab to download, check, or zip a public Behance project or moodboard URL."
