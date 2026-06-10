@@ -1,28 +1,28 @@
 # behance-grab
 
-Download, organize, check, and zip public Behance project or moodboard URLs.
+下载、整理、检查并打包公开的 Behance 项目或情绪板链接。
 
-## Overview
+## 概述
 
-`behance-grab` is a Behance capture skill for local archival and reference workflows. It can:
+`behance-grab` 是一个用于本地归档和参考的 Behance 抓取 skill，支持：
 
-- download one public Behance project into a folder you choose
-- download or incrementally update a public Behance moodboard
-- check whether a project or moodboard has changed
-- package an existing download as a ZIP archive
-- probe Behance connectivity before a download starts
+- 下载单个公开 Behance 项目到你指定的文件夹
+- 下载或增量更新公开 Behance 情绪板
+- 检查项目或情绪板是否有更新
+- 将已有下载目录打包为 ZIP
+- 在正式下载前先测试 Behance 网络连通性
 
-The skill keeps project folders stable, names moodboard images in numeric order, and preserves update metadata for future checks.
+这个 skill 会保持情绪板项目顺序稳定，按数字顺序命名图片，并保留更新所需的元数据，方便后续增量检查。
 
-## Usage
+## 用法
 
-Use the bundled script from the skill folder:
+直接使用 skill 目录里的脚本：
 
 ```powershell
 python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py <command>
 ```
 
-### Common commands
+### 常用命令
 
 ```powershell
 python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py project "<project-url>" --output "<folder>" --zip
@@ -32,41 +32,41 @@ python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py probe 
 python C:\Users\lenovo\.codex\skills\behance-grab\scripts\behance_grab.py zip "<folder>"
 ```
 
-### Command summary
+### 命令说明
 
-| Command | Purpose |
+| 命令 | 作用 |
 | --- | --- |
-| `project` | Download a single public Behance project. |
-| `moodboard` | Download or incrementally update a public Behance moodboard. |
-| `check` | Inspect a local download for remote updates. |
-| `probe` | Test whether Behance is reachable from this machine. |
-| `zip` | Create a ZIP file from an existing downloaded folder. |
+| `project` | 下载单个公开 Behance 项目。 |
+| `moodboard` | 下载或增量更新公开 Behance 情绪板。 |
+| `check` | 检查本地下载内容是否有远端更新。 |
+| `probe` | 检测当前机器是否能连通 Behance。 |
+| `zip` | 将已有下载目录打包成 ZIP。 |
 
-## Install
+## 安装
 
-### Codex
+### 安装到 Codex
 
-Copy this folder to:
+把整个目录复制到：
 
 ```text
 C:\Users\lenovo\.codex\skills\behance-grab
 ```
 
-Then restart or reload Codex so it picks up the new skill files.
+然后重新启动或刷新 Codex，让它加载新的 skill 文件。
 
-### Other agents
+### 安装到其他 Agent
 
-For other agents that support local skills, custom instructions, or tool packs, copy the same folder structure into that agent's skill or custom prompt directory, then reload the agent. Keep these files together:
+对于支持本地 skills、custom instructions 或工具包的其他 Agent，把同样的目录结构复制到对应的 skill 或自定义提示目录中，然后重新加载该 Agent。需要保留这些文件：
 
 - `SKILL.md`
 - `README.md`
 - `scripts/behance_grab.py`
 - `agents/openai.yaml`
 
-## Notes
+## 注意事项
 
-- Downloaded Behance assets are usually copyrighted.
-- Use the content only with the rights holder's permission and follow local law.
-- The script requires `curl.exe`.
-- It uses longer timeouts and extra retries to reduce false failures on slow connections.
-- Before a download, the skill asks for a copyright acknowledgement and a target output folder.
+- Behance 素材通常受版权保护。
+- 使用前应取得权利人许可，并遵守当地法律。
+- 脚本依赖 `curl.exe`。
+- 脚本使用了更长的超时和更多重试，以减少慢网络下的误失败。
+- 开始下载前，skill 会先要求确认版权提示和输出目录。
